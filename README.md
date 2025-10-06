@@ -19,49 +19,49 @@ It serves as a strong demonstration of modern AI development practices, includin
 - Clean Web UI: Built with Streamlit for an interactive, modern user interface.
 
 ### 🏗️ Architecture and Agent Flow
-The pipeline executes four distinct steps, ensuring high-quality, actionable results:
+- The pipeline executes four distinct steps, ensuring high-quality, actionable results:
 
-PromptAgent (gpt-4o-mini): Takes the user's initial query and enhances it into a refined, specific search term.
+- PromptAgent (gpt-4o-mini): Takes the user's initial query and enhances it into a refined, specific search term.
 
-WebSearchAgent (gpt-4o-mini): Executes the web search using the optimized prompt and summarizes the results.
+- WebSearchAgent (gpt-4o-mini): Executes the web search using the optimized prompt and summarizes the results.
 
-ReportAgentWriter (gpt-4o-mini): Receives the original query and summarized results, then generates a detailed report in a structured ReportData format (enforced by Pydantic).
+- ReportAgentWriter (gpt-4o-mini): Receives the original query and summarized results, then generates a detailed report in a structured ReportData format (enforced by Pydantic).
 
-EmailAgent (gpt-4o-mini): Uses the custom send_email tool (backed by SendGrid) to format the Markdown report into HTML and deliver it to the user-specified email address.
+- EmailAgent (gpt-4o-mini): Uses the custom send_email tool (backed by SendGrid) to format the Markdown report into HTML and deliver it to the user-specified email address.
 
 ### 🚀 Getting Started
-Prerequisites
-Python 3.9+
+#### Prerequisites
+- Python 3.9+
 
-A Virtual Environment (env folder in your project)
+- A Virtual Environment (env folder in your project)
 
-API Keys for:
+- API Keys for:
 
 OpenAI: For the LLM agents.
 
 SendGrid: For sending the final email report.
 
-Configuration
+-Configuration
 Clone the repository:
 
-git clone github repo link
-cd Product-Research-Agent-Pipeline
+-git clone github repo link
+-cd Product-Research-Agent-Pipeline
 
-Install dependencies:
+-Install dependencies:
 
 pip install -r requirements.txt
 
-Create a .env file in the root directory (where main.py is located) and add your secret keys:
+-Create a .env file in the root directory (where main.py is located) and add your secret keys:
 
-# .env file content
+### .env file content
 - SENDGRID_API_KEY="SG.**************************************"
 
 ### How to Run the App
-Execute the Streamlit command from the root directory of the project:
+-Execute the Streamlit command from the root directory of the project:
 
 streamlit run main.py
 
-The application will open in your browser, where you can enter your query and settings (API Key and recipient email address) in the sidebar.
+-The application will open in your browser, where you can enter your query and settings (API Key and recipient email address) in the sidebar.
 
 ### 📁 Project Structure
 The project is designed for maximum modularity and clarity:
@@ -81,4 +81,4 @@ Product-Research-Agent-Pipeline/
 └── requirements.txt          # List of Python dependencies.
 
 ### 🤝 Contributing
-Feedback and contributions are welcome! Feel free to open issues or submit pull requests.
+-Feedback and contributions are welcome! Feel free to open issues or submit pull requests.
