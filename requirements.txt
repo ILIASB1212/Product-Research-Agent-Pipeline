@@ -1,0 +1,10 @@
+openai
+pydantic
+python-dotenv
+langchain-openai
+langchain_groq
+streamlit
+ipykernel
+openai-agents
+groq
+sendgrid
